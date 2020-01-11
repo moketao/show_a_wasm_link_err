@@ -1,0 +1,1 @@
+WebAssembly.instantiateStreaming||(WebAssembly.instantiateStreaming=(async(t,a)=>{const e=await(await t).arrayBuffer();return await WebAssembly.instantiate(e,a)}));const go=new Go;WebAssembly.instantiateStreaming(fetch("main.wasm"),go.importObject).then(t=>{go.run(t.instance)});
